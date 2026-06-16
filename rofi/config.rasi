@@ -1,0 +1,129 @@
+
+configuration {
+    modes: "drun";
+    sorting-method: "normal";
+    show-icons: true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "menu:";
+    display-drun: "";
+}
+
+@theme "/home/monokai/.config/colors/generated/rofi.rasi"
+
+* {
+    font: "Iosevka Nerd Font 12";
+    background-color: transparent;
+    text-color: @fg0;
+
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+/* ===== Window ===== */
+window {
+    location: center;
+    width: 560;
+    y-offset: -20;
+
+    border-radius: 8px;
+    border: 1px;
+    border-color: @muted;
+
+    background-color: @bg0;
+}
+
+/* ===== Main container ===== */
+mainbox {
+    padding: 14px;
+    spacing: 10px;
+    background-color: transparent;
+}
+
+/* ===== Input bar ===== */
+inputbar {
+    background-color: @bg1;
+    border-radius: 6px;
+    border: 1px;
+    border-color: @border;
+
+    padding: 11px 14px;
+    spacing: 10px;
+}
+
+prompt {
+    text-color: @yellow;
+    background-color: transparent;
+}
+
+entry {
+    text-color: @fg0;
+    placeholder: "search";
+    placeholder-color: @fg2;
+    background-color: transparent;
+}
+
+/* ===== List ===== */
+listview {
+    background-color: transparent;
+    margin: 2px 0 0;
+
+    columns: 1;
+    lines: 7;
+    fixed-height: false;
+}
+
+/* ===== Elements ===== */
+element {
+    padding: 10px 12px;
+    spacing: 10px;
+    border-radius: 6px;
+
+    background-color: transparent;
+}
+
+element normal urgent {
+    text-color: @red;
+}
+
+element normal active {
+    text-color: @blue;
+}
+
+element selected normal,
+element selected active {
+    text-color: @fg0;
+    background-color: @bg3;
+}
+
+element selected urgent {
+    text-color: @red;
+    background-color: @bg3;
+}
+
+/* ===== Icons & text ===== */
+element-icon {
+    size: 1.15em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: transparent;
+}
+
+/* ===== Message box ===== */
+message {
+    margin: 4px 0 0;
+    border-radius: 6px;
+    border: 1px;
+    border-color: @border;
+
+    background-color: @bg2;
+}
+
+textbox {
+    padding: 9px 12px;
+    background-color: transparent;
+}

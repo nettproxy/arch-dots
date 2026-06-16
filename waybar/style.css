@@ -1,0 +1,104 @@
+@import "../colors/generated/waybar.css";
+
+* {
+    font-family: "Iosevka", monospace;
+    font-weight: 800;
+    font-size: 13px;
+    color: @fg1;
+}
+
+window#waybar {
+    background: @bg0;
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px 0px;
+}
+
+/* WORKSPACES */
+
+#workspaces button {
+    padding: 0px 1px;
+    margin: 3px 2px;
+    border-radius: 0;
+    background: transparent;
+    color: @muted;
+}
+
+/* active workspace */
+#workspaces button.active {
+    color: @fg0;
+    border-bottom: 2px solid @accent;
+
+}
+
+/* hover */
+#workspaces button:hover {
+    background: @bg1;
+}
+
+/* urgent */
+#workspaces button.urgent {
+    color: @white2;
+    background: @red;
+}
+
+#mpris {
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+#clock {
+    padding: 0 8px;
+}
+
+#tray {
+    padding: 0 8px;
+    margin: 0 3px;
+    background: @bg1;
+}
+
+#wireplumber,
+#backlight,
+#battery {
+    padding: 0 5px;
+}
+
+/* RIGHT SIDE STATES */
+
+#battery.warning {
+    background: alpha(@yellow, 0.16);
+    padding: 1px 4px;
+}
+
+#battery.critical {
+    background: alpha(@red, 0.18);
+    padding: 1px 4px;
+}
+
+#wireplumber.muted {
+    opacity: 0.6;
+}
+
+/*  TOOLTIP  */
+
+tooltip {
+    background: @bg0;
+    border: 1px solid @border;
+}
+
+tooltip label {
+    color: @fg0;
+    font-size: 11px;
+}
+
+#custom-launcher {
+}
+
+#custom-cpucat {
+  font-family: "Waycat", monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: @accent;
+  padding-left: 5px;
+  padding-right: 8px;
+}
